@@ -1,44 +1,40 @@
-# Análisis del Embudo de Ventas y Evaluación de un Test A/A/B en una Aplicación de Productos Alimenticios
+# Sales Funnel Analysis & A/A/B Testing in a Food Products App
+## Context
+Understanding user behavior is crucial for improving conversion rates and user experience in an e-commerce app. This project aims to analyze the sales funnel of a food products application and evaluate the results of an A/A/B test assessing the impact of font changes.
 
-## Contexto
-En una empresa emergente que vende productos alimenticios a través de una aplicación móvil, comprender el comportamiento del usuario es clave para mejorar la conversión y la experiencia de compra. Este proyecto tiene como objetivo analizar el flujo de usuarios a lo largo del embudo de ventas y evaluar los resultados de un test A/A/B, que compara la percepción y el impacto de un cambio en las fuentes tipográficas de la aplicación.
+## Tools Used
+- **Python:** For data processing and analysis.
+- **Pandas & NumPy:** For cleaning and structuring the dataset.
+- **Matplotlib & Seaborn:** For visualizing trends and patterns.
+- **Scipy & Statsmodels:** For statistical testing in the A/A/B experiment.
+- **Dataset:** User interaction logs, including sales funnel events and test group assignments.
+## Analysis Performed
+**1. Sales Funnel Analysis**
+The sales funnel helps evaluate how users progress through different stages of the purchasing process, addressing key questions such as:
 
-## Herramientas Utilizadas
-- **Python:** Para la manipulación y análisis de datos.
-- **Pandas y NumPy:** Para la limpieza y estructuración de la información.
-- **Matplotlib y Seaborn:** Para generar visualizaciones que faciliten el análisis de tendencias.
-- **Scipy y Statsmodels:** Para la realización de pruebas estadísticas en el test A/A/B.
-- **Dataset:** Registros de interacción de los usuarios con la aplicación, incluyendo eventos dentro del embudo de ventas y su asignación a los grupos de prueba.
+- How many users complete a purchase?
+- Where do most users drop off?
+- Which stages create the biggest bottlenecks?
+Conversion rates were calculated for each funnel step to pinpoint friction points in the process.
 
-## Análisis Realizado
-**1. Análisis del Embudo de Ventas**
-El embudo de ventas permite evaluar cómo los usuarios avanzan a través de diferentes etapas hasta la compra final. Este análisis busca responder preguntas clave como:
+**2. A/A/B Test Evaluation**
+The A/A/B test was designed to assess the impact of changing the app’s font. Users were divided into three groups:
 
-- ¿Cuántos usuarios completan el proceso de compra?
-- ¿En qué etapas ocurre la mayor cantidad de abandonos?
-- ¿Existen cuellos de botella que puedan optimizarse?
-Para ello, se calcularon las tasas de conversión en cada paso del embudo y se identificaron los puntos de mayor fricción dentro del proceso.
+- Group A1 & Group A2 (Control): Continued using the old font.
+- Group B (Test): Received the new font.
+The purpose of having two control groups (A1 & A2) was to validate the reliability of the experiment. If significant differences appeared between them, it could indicate hidden factors affecting the results.
 
-**2. Evaluación del Test A/A/B**
-El test A/A/B se diseñó para evaluar el impacto de un cambio en la fuente tipográfica de la aplicación. Se crearon tres grupos de usuarios:
+Key metrics analyzed included:
 
-- Grupo A1 y Grupo A2 (Control): Continuaron viendo la aplicación con las fuentes antiguas.
-- Grupo B (Prueba): Recibió la aplicación con las nuevas fuentes.
-El propósito de incluir dos grupos de control (A1 y A2) es validar que no haya diferencias significativas entre ellos. Si existen variaciones inesperadas, podrían indicar la presencia de factores ocultos que distorsionen los resultados.
+- Conversion rates across groups.
+- Drop-off rate differences.
+- Statistical tests to determine if font changes significantly affected user interaction.
+## Results & Findings
+**Sales Funnel:** Critical stages with high user drop-off were identified, guiding efforts to improve retention.
+**A/A/B Test:**
+- No significant differences were found between the A1 and A2 groups, confirming test reliability.
+- Comparing Group B to the control groups determined whether the font change positively or negatively affected conversion and user engagement.
+## Conclusions
+This analysis provides valuable insights for optimizing the app’s conversion process. The sales funnel findings highlight key areas for improvement, while the A/A/B test results support data-driven decisions regarding the app’s visual design.
 
-Se analizaron métricas como:
-
-- La tasa de conversión en cada grupo.
-- La diferencia en la tasa de abandono entre los grupos.
-- Pruebas estadísticas para determinar si los cambios en las fuentes impactaron significativamente la interacción del usuario.
-
-## Resultados y Hallazgos
-- **Embudo de Ventas:** Se identificaron etapas críticas donde la mayoría de los usuarios abandonaban la compra, permitiendo definir estrategias para mejorar la retención.
-- **Test A/A/B:**
-- No se encontraron diferencias significativas entre los grupos de control (A1 y A2), validando la confiabilidad del experimento.
-- Al comparar el grupo B con los grupos de control, se determinó si el cambio en las fuentes afectó positiva o negativamente la conversión y la experiencia del usuario.
-
-## Conclusiones
-Este análisis proporciona información valiosa para mejorar la conversión dentro de la aplicación. Los hallazgos del embudo de ventas permiten enfocar esfuerzos en las etapas con mayor abandono, mientras que los resultados del test A/A/B ayudan a tomar decisiones informadas sobre el diseño visual de la aplicación.
-
-En futuras iteraciones, se podrían realizar pruebas adicionales con otros elementos visuales, como colores o disposición de botones, para seguir optimizando la experiencia del usuario y la efectividad del proceso de compra.
+Future iterations could test additional design changes, such as colors or button placements, to further enhance the user experience and sales performance.
